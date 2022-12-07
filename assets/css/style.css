@@ -4,3 +4,79 @@
     box-sizing: border-box;
     font-family: cursive;
 }
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(22, 9, 56, 0.726);
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.705);
+    height: 80vh;
+    width: 80vw;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.guide {
+    text-align: center;
+    height: 20vh;
+
+
+}
+
+#option-container {
+    text-align: center;
+    display: flex;
+    border-radius: 5px;
+    height: 30vh;
+}
+
+.btn {
+
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px 10px 5px 10px;
+    background-color: rgb(65, 55, 110);
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgb(107, 62, 223);
+}
+
+.btn-menu {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.converter-container {
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #option-container {
+        display: grid;
+    }
+
+    .btn {
+        width: 30vw;
+    }
+}
