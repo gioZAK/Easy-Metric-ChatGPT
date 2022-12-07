@@ -1,30 +1,19 @@
-let input = document.getElementById("input");
-let result = document.getElementById("result");
-let inputType = document.getElementById("inputType");
-let resultType = document.getElementById("resultType");
+const input = document.getElementById("input");
+const result = document.getElementById("result");
+const inputType = document.getElementById("inputType");
+const resultType = document.getElementById("resultType");
 
-let inputTypeValeu, resultTypeValue;
+// Event Listener
+input.addEventListener("keyup", lengthCalc);
+inputType.addEventListener("change", lengthCalc);
+resultType.addEventListener("change", lengthCalc);
 
-input.addEventListener("keyup", myResult);
-inputType.addEventListener("change", myResult);
-resultType.addEventListener("change", myResult);
+function lengthCalc() {
 
-// taking initial value
-option_from = inputType.value;
-option_to = resultType.value;
+    //This function compares the user input and calculates 
 
-
-function myResult() {
-
-
-    // when we change the input and output type value we need to update the 
-    // inputFrom and resultTo
-
-    inputFrom = inputType.value;
-    resultTo = resultType.value;
-
-
-    // now compare the input and resultType value and add formula
+    let inputFrom = inputType.value;
+    let resultTo = resultType.value;
 
     if (inputFrom === "centimeter" && resultTo === "inches") {
         result.value = Number(input.value) * 0.3937;
@@ -59,6 +48,5 @@ function myResult() {
         result.value = Number(input.value) / 1.609;
 
     }
-
 
 }
