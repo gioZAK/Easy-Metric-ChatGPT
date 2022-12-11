@@ -10,41 +10,46 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="guide">
-            <h1>Volume Metrics</h1>
-            <p>Scroll through</p>
-        </div>
 
-        <div id="option-container">
-            <div id="converter-body">
-                <div class="converter-container">
-                    <input type="number" placeholder="0" id="input">
-                    <select id="inputType">
-                        <option value="milliliters">Milliliters</option>
-                        <option value="liters">Liters</option>
-                        <option value="cups">Cups</option>
-                        <option value="pints">Pints</option>
-                    </select>
-                </div>
+    <body>
+        <div class="container">
+            <div class="guide">
+                <h1>Volume Metrics</h1>
+                <p>Scroll through</p>
+            </div>
 
-                <div class="converter-container">
-                    <input type="number" placeholder="0" id="result" disabled>
-                    <select id="resultType">
-                        <option value="milliliters">Milliliters</option>
-                        <option value="liters">Liters</option>
-                        <option value="cups">Cups</option>
-                        <option value="pints">Pints</option>
-                    </select>
+            <div id="option-container">
+                <div id="converter-body">
+                    <div class="converter-container">
+                        <label for="input">Input:</label>
+                        <input type="number" placeholder="0" id="input">
+                        <select id="inputType">
+                            <option value="milliliters">Milliliters</option>
+                            <option value="liters">Liters</option>
+                            <option value="cups">Cups</option>
+                            <option value="pints">Pints</option>
+                        </select>
+                    </div>
+
+                    <div class="converter-container">
+                        <label for="result">Result:</label>
+                        <input type="number" placeholder="0" id="result" disabled>
+                        <select id="resultType">
+                            <option value="milliliters">Milliliters</option>
+                            <option value="liters">Liters</option>
+                            <option value="cups">Cups</option>
+                            <option value="pints">Pints</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="btn-menu">
-            <a href="index.html"><button class="btn btn-menu">Menu</button></a>
+            <div class="btn-menu">
+                <a href="index.html"><button class="btn btn-menu">Menu</button></a>
+            </div>
         </div>
+    </body>
 
-    </div>
 
     <script src="assets/js/volumescript.js"></script>
 </body>
