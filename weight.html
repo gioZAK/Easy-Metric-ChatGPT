@@ -2,42 +2,47 @@
 <html lang="en">
 
 <head>
+    <!--Meta Tags-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WebApp for metric conversion">
+    <meta name="keywords" content="metric conversion, kg to lbs, miles to km, metrics">
+    <!--CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
+
     <title>Weight Metric</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="guide">
+    <section class="container">
+        <header>
             <h1>Weight Metrics</h1>
-            <p>Scroll through</p>
-        </div>
-
+            <p>Input on top field</p>
+        </header>
+        <!--Intup Output-->
         <div id="option-container">
 
             <div id="converter-body">
-
+                <!--User Input-->
                 <div class="converter-container">
                     <input type="number" placeholder="0" id="input">
 
                     <select id="inputType">
-                        <option value="centimeter">Centimeter</option>
-                        <option value="meter">Meter</option>
-                        <option value="kilometer">Kilometer</option>
+                        <option value="gram">Gram</option>
+                        <option value="kg">Kilogram</option>
+                        <option value="pounds">Pound</option>
                     </select>
 
                 </div>
-
+                <!--Conversion Output-->
                 <div class="converter-container">
                     <input type="number" placeholder="0" id="result" disabled>
 
                     <select id="resultType">
-                        <option value="inches">Inches</option>
-                        <option value="foot">Foot</option>
-                        <option value="miles">Miles</option>
+                        <option value="gram">Gram</option>
+                        <option value="kg">Kilogram</option>
+                        <option value="pounds">Pound</option>
                     </select>
 
                 </div>
@@ -45,16 +50,20 @@
             </div>
 
         </div>
+        <!--Back to menu button-->
+        <nav class="btn-menu">
+            <button class="btn btn-menu" onClick="getLink(this)" value="index.html">Menu</button>
+        </nav>
 
-        <div class="btn-menu">
-            <a href="index.html"><button class="btn btn-menu">Menu</button></a>
-        </div>
-
-    </div>
-
+    </section>
+    <!--JavaScript-->
     <script src="assets/js/weightscript.js"></script>
+    <script>
+        /* this function opens a link when the button is clicked */
+        function getLink(link) {
+            location.href = link.value;
+        }
+    </script>
 </body>
-
-
 
 </html>

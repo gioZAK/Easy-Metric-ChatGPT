@@ -9,39 +9,29 @@ inputType.addEventListener("change", weightCalc);
 resultType.addEventListener("change", weightCalc);
 
 function weightCalc() {
+    // Define conversion factors
+    const factors = {
+        gram: {
+            gram: 1,
+            kg: 0.001,
+            pounds: 0.00220462
+        },
+        kg: {
+            gram: 1000,
+            kg: 1,
+            pounds: 2.20462
+        },
+        pounds: {
+            gram: 453.592,
+            kg: 0.453592,
+            pounds: 1
+        }
+    }
 
-    //This function compares the user input and calculates 
-
+    // Get input and result units
     let inputFrom = inputType.value;
     let resultTo = resultType.value;
 
-    if (inputFrom === "celcius" && resultTo === "celcius") {
-        result.value = Number(input.value);
-    } else if (inputFrom === "celcius" && resultTo === "kelvin") {
-        result.value = Number(input.value) + 273.15;
-
-    } else if (inputFrom === "celcius" && resultTo === "fahrenheit") {
-        result.value = (Number(input.value) * 9 / 5) + 32;
-    }
-
-    if (inputFrom === "kelvin" && resultTo === "celcius") {
-        result.value = Number(input.value) - 273.15;
-    } else if (inputFrom === "kelvin" && resultTo === "kelvin") {
-        result.value = Number(input.value);
-    } else if (inputFrom === "kelvin" && resultTo === "fahrenheit") {
-        result.value = (Number(input.value) - 273.15) * 9 / 5 + 32;
-    }
-
-
-    if (inputFrom === "fahrenheit" && resultTo === "celcius") {
-        result.value = (Number(input.value) - 32) * 5 / 9;
-
-    } else if (inputFrom === "fahrenheit" && resultTo === "kelvin") {
-        result.value = (Number(input.value) - 32) * 5 / 9 + 273.15;
-        tempCalc
-    } else if (inputFrom === "fahrenheit" && resultTo === "fahrenheit") {
-        result.value = Number(input.value);
-    }
-
+    // Convert the input value using the conversion factor
+    result.value = Number(input.value) * factors[inputFrom][resultTo];
 }
-weight
