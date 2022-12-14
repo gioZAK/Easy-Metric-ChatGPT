@@ -18,19 +18,19 @@ const conversionFactors = {
     liters: {
         milliliters: 1000,
         liters: 1,
-        cups: 1 / 4,
-        pints: 1 / 2.11338,
+        cups: 4.22675,
+        pints: 2.11338,
     },
     cups: {
         milliliters: 240,
-        liters: 4,
+        liters: 0.236588,
         cups: 1,
-        pints: 1 / 2.37,
+        pints: 0.5,
     },
     pints: {
         milliliters: 473.176,
-        liters: 2.11338,
-        cups: 2.37,
+        liters: 0.473176473,
+        cups: 1.97157,
         pints: 1,
     },
 
