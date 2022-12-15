@@ -13,7 +13,7 @@
     <div class="container">
         <div class="guide">
             <h1>Temperature Metrics</h1>
-            <p>Scroll through</p>
+            <p>Select what you need</p>
         </div>
 
         <div id="option-container">
@@ -21,7 +21,7 @@
             <div id="converter-body">
 
                 <div class="converter-container">
-                    <label for="input">Input:</label>
+                    <label>INPUT</label>
                     <input type="number" placeholder="0" id="input">
 
                     <select id="inputType">
@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="converter-container">
-                    <label for="result">Result:</label>
+                    <label for="result">RESULT</label>
                     <input type="number" placeholder="0" id="result" disabled>
 
                     <select id="resultType">
@@ -48,13 +48,19 @@
 
         </div>
 
-        <div class="btn-menu">
-            <a href="index.html"><button class="btn btn-menu">Menu</button></a>
-        </div>
+        <nav class="btn-menu">
+            <button class="btn btn-menu" onClick="getLink(this)" value="index.html">Menu</button>
+        </nav>
 
     </div>
 
     <script src="assets/js/temperaturescript.js"></script>
+    <script>
+        /* this function opens a link when the button is clicked */
+        function getLink(link) {
+            location.href = link.value;
+        }
+    </script>
 </body>
 
 
