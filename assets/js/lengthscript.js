@@ -16,6 +16,7 @@ const conversionFactors = {
         kilometers: 1 / 100000,
         inches: 0.393701,
         miles: 1 / 160934.4,
+        feet: 1 / 30.48,
     },
     meters: {
         centimeters: 100,
@@ -23,6 +24,7 @@ const conversionFactors = {
         kilometers: 1 / 1000,
         inches: 39.3701,
         miles: 1 / 1609.344,
+        feet: 1 / 0.3048,
     },
     kilometers: {
         centimeters: 100000,
@@ -30,6 +32,7 @@ const conversionFactors = {
         kilometers: 1,
         inches: 39370.1,
         miles: 0.621371,
+        feet: 1 / 0.0003048,
     },
     inches: {
         centimeters: 2.54,
@@ -37,6 +40,7 @@ const conversionFactors = {
         kilometers: 1 / 39370.1,
         inches: 1,
         miles: 1 / 63360,
+        feet: 1 / 12,
     },
     miles: {
         centimeters: 160934.4,
@@ -44,6 +48,15 @@ const conversionFactors = {
         kilometers: 1.60934,
         inches: 63360,
         miles: 1,
+        feet: 1 / 0.000189394,
+    },
+    feet: {
+        centimeters: 30.48,
+        meters: 0.3048,
+        kilometers: 0.0003048,
+        inches: 12,
+        miles: 0.000189394,
+        feet: 1,
     },
 };
 
