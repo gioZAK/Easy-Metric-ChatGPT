@@ -1,4 +1,4 @@
-This is a updated version of this project 
+This is an updated version of this project 
 
 Repo
 https://github.com/gioZAK/easy-metrics
