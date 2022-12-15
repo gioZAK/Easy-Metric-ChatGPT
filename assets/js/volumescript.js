@@ -1,11 +1,12 @@
 const result = document.getElementById("result");
 const inputType = document.getElementById("inputType");
 const resultType = document.getElementById("resultType");
+const input = document.getElementById("input"); // added missing line
 
 // Event Listener
-input.addEventListener("keyup", timeCalc);
-inputType.addEventListener("change", timeCalc);
-resultType.addEventListener("change", timeCalc);
+input.addEventListener("keyup", volumeCalc);
+inputType.addEventListener("change", volumeCalc);
+resultType.addEventListener("change", volumeCalc);
 
 // Conversion factors
 const conversionFactors = {
@@ -36,7 +37,7 @@ const conversionFactors = {
 
 };
 
-function timeCalc() {
+function volumeCalc() {
     // This function compares the user input and calculates
 
     let inputFrom = inputType.value;
