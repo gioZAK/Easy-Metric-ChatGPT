@@ -1,6 +1,7 @@
 const result = document.getElementById("result");
 const inputType = document.getElementById("inputType");
 const resultType = document.getElementById("resultType");
+const input = document.getElementById("input");
 
 // Event Listener
 input.addEventListener("keyup", lengthCalc);
