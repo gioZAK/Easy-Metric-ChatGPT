@@ -9,38 +9,26 @@ inputType.addEventListener("change", tempCalc);
 resultType.addEventListener("change", tempCalc);
 
 function tempCalc() {
-
-    //This function compares the user input and calculates 
-
     let inputFrom = inputType.value;
     let resultTo = resultType.value;
 
-    if (inputFrom === "celcius" && resultTo === "celcius") {
+    if (inputFrom === "celsius" && resultTo === "celsius") {
         result.value = Number(input.value);
-    } else if (inputFrom === "celcius" && resultTo === "kelvin") {
+    } else if (inputFrom === "celsius" && resultTo === "kelvin") {
         result.value = Number(input.value) + 273.15;
-
-    } else if (inputFrom === "celcius" && resultTo === "fahrenheit") {
+    } else if (inputFrom === "celsius" && resultTo === "fahrenheit") {
         result.value = (Number(input.value) * 9 / 5) + 32;
-    }
-
-    if (inputFrom === "kelvin" && resultTo === "celcius") {
+    } else if (inputFrom === "kelvin" && resultTo === "celsius") {
         result.value = Number(input.value) - 273.15;
     } else if (inputFrom === "kelvin" && resultTo === "kelvin") {
         result.value = Number(input.value);
     } else if (inputFrom === "kelvin" && resultTo === "fahrenheit") {
         result.value = (Number(input.value) - 273.15) * 9 / 5 + 32;
-    }
-
-
-    if (inputFrom === "fahrenheit" && resultTo === "celcius") {
+    } else if (inputFrom === "fahrenheit" && resultTo === "celsius") {
         result.value = (Number(input.value) - 32) * 5 / 9;
-
     } else if (inputFrom === "fahrenheit" && resultTo === "kelvin") {
         result.value = (Number(input.value) - 32) * 5 / 9 + 273.15;
-        tempCalc
     } else if (inputFrom === "fahrenheit" && resultTo === "fahrenheit") {
         result.value = Number(input.value);
     }
-
 }
